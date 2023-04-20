@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     borderWidth: {
       '1': '1px'
-    }
+    },
   },
   plugins: [],
 }

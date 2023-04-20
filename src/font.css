@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,400;1,700&family=Comfortaa&family=DynaPuff&family=Inconsolata&family=Merriweather:wght@400;700&family=Montserrat&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+NKo&family=Oswald&family=Poppins:wght@400;500&family=Righteous&family=Roboto+Mono:wght@100;500&family=Roboto:wght@100&family=Satisfy&family=Signika+Negative:wght@300;400&family=Ubuntu&display=swap');
+
+
+.font-brand {
+    font-family: 'Satisfy', cursive;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.font-shadow {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.font-judul {
+    font-family: 'Righteous', cursive;
+}
+
+.font-nama {
+    text-transform: capitalize;
+    font-family: 'DynaPuff', cursive; 
+}
+
+.font-harga {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.font-btn {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.font-pesanan {
+    font-family: 'Poppins', sans-serif;
+}
+
