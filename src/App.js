@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import KomangResto from "./Components/Komang-resto";
+import { AppProvider } from "./Context/App-context-";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <div className="App">
+        <h1 className="text-center mb-2 mt-2 uppercase font- text-lg drop-shadow-2xl">Komang Resto</h1>
+        <KomangResto />
+      </div>
+    </AppProvider>
   );
 }
 
