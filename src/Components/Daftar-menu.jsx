@@ -1,24 +1,25 @@
-import { useState } from "react"
+// import { useState } from "react"
 import { useDataApp } from "../Context/App-context-"
 
 export default function DaftarMenu() {
-    const context = useDataApp()
-    const dataTampil = context.dataTampil
-    const daftarPesanan = context.daftarPesanan
-    const setDaftarPesanan = context.setDaftarPesanan
-    const total = context.total
-    const setTotal = context.setTotal
+    const [state, dispatch] = useDataApp()
+    const dataTampil = state.dataTampil
+    const daftarPesanan = state.daftarPesanan
+    const total = state.total
 
     function jumlahPesanan(nama, harga) {
-        setDaftarPesanan([...daftarPesanan, {
-            nama,
-            harga
-        }])
+        dispatch({
+            type: 'DaftarPesanan',
+            payload: [...daftarPesanan, {
+                nama
+            }]
+        })
 
-        const sumTotal = parseFloat(harga.replace(/\./g, ''));
-        setTotal(total + sumTotal)
+        // dispatch({
+        //     type: 'TotalBayar',
+        //     payload: 
+        // })
     }
-    // setTotal(subTotal.toLocaleString('id-ID'));
 
     return (
             <div className="daftar-menu border-1 border-black w-3/5 text-center h-[87vh] bg-slate-700 text-white font-serif uppercase">

@@ -8,6 +8,23 @@ import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
         return useContext(AppContext)
     }
 
+    function reducer(state, action) {
+        switch(action.type) {
+            case 'Makanan':
+                return {...state, dataTampil: DataMakanan}
+            case 'Minuman':
+                return {...state, dataTampil: DataMinuman}
+            case 'Seafood':
+                return {...state, dataTampil: DataSeafood}
+            case 'DaftarPesanan':
+                return {...state, daftarPesanan: action.payload}
+            case 'TotalBayar':
+                return {...state, total: action.payload}
+            default:
+                throw new Error();
+        }
+    }
+
     const initialState = {
         makanan: DataMakanan,
         minuman: DataMinuman,
@@ -19,7 +36,7 @@ import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
 
 
     export const AppProvider = ({children}) => {
-        const [state, dispatch] = useReducer(state, initialState)
+        const [state, dispatch] = useReducer(reducer, initialState)
     
     
         const AppContextValue = [state, dispatch]
