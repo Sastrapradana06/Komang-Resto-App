@@ -1,4 +1,4 @@
-// import { useState } from "react"
+
 import { useDataApp } from "../Context/App-context-"
 
 export default function DaftarMenu() {
@@ -15,12 +15,13 @@ export default function DaftarMenu() {
             }]
         })
 
-        // dispatch({
-        //     type: 'TotalBayar',
-        //     payload: 
-        // })
-    }
+        const sumTotal = parseFloat(harga.replace(/\./g, ''));
 
+        dispatch({
+            type: 'TotalBayar',
+            payload: total + sumTotal
+        })
+    }
     return (
             <div className="daftar-menu border-1 border-black w-3/5 text-center h-[87vh] bg-slate-700 text-white font-serif uppercase">
                 <div className="border-b-1 border-black p-2">

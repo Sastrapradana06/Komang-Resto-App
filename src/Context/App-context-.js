@@ -1,9 +1,8 @@
-import { createContext, useReducer, useContext, useState } from "react";
+import { createContext, useReducer, useContext} from "react";
 import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
 
-// + Use Reducer
+// + Reducer
     export const AppContext = createContext({})
-        
     export const useDataApp = () => {
         return useContext(AppContext)
     }
@@ -37,7 +36,6 @@ import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
 
     export const AppProvider = ({children}) => {
         const [state, dispatch] = useReducer(reducer, initialState)
-    
     
         const AppContextValue = [state, dispatch]
         return (
