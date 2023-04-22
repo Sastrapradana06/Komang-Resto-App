@@ -17,6 +17,8 @@ import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
                 return {...state, dataTampil: DataSeafood}
             case 'DaftarPesanan':
                 return {...state, daftarPesanan: action.payload}
+            case 'JumlahPesanan':
+                return {...state, jumlahPesanan: action.payload}
             case 'TotalBayar':
                 return {...state, total: action.payload}
             default:
@@ -28,8 +30,9 @@ import { DataMakanan, DataMinuman, DataSeafood } from "../Data/Menu-resto";
         makanan: DataMakanan,
         minuman: DataMinuman,
         seafood: DataSeafood,
-        dataTampil: DataMakanan,
+        dataTampil: '',
         daftarPesanan: [],
+        jumlahPesanan: 0,
         total: 0
     }
 
